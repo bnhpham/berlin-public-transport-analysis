@@ -1,6 +1,6 @@
 # Data Integration and Large-scale Analysis WiSe 2025 Exercise
 
-This exercise implements ETL pipelines for data integration and analysis of real-world train data collected via the Deutsche Bahn (DB) API Marketplace between September 2 and October 15, 2025. It covers a star schema design, a PostgreSQL ingestion pipeline as well as distributed large-scale ETL using Apache Spark with Parquet output. Analytical queries were developed and executed on both systems to extract insights. Finally, the Berlin S-Bahn network is modeled as a directed graph in NetworkX to compute shortest paths and earliest arrival times between stations.
+This exercise implements ETL pipelines for data integration and analysis of real-world train data collected via the Deutsche Bahn (DB) API Marketplace between September 2 and October 15, 2025. It covers a star schema design, a PostgreSQL ingestion pipeline as well as a distributed large-scale ETL using Apache Spark with Parquet output. Analytical queries were developed and executed on both systems to extract insights. Finally, the Berlin S-Bahn network is modeled as a directed graph in NetworkX to compute shortest paths and earliest arrival times between stations.
 
 ## Data Source
 The dataset is not included in this repository as it was provided as part of the course. However, it can be accessed via the [Deutsche Bahn API Marketplace](https://developers.deutschebahn.com/db-api-marketplace/apis/).
