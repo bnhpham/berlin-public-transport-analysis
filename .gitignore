@@ -1,8 +1,8 @@
 output/changes_raw/
 output/planned_raw/
-test_parquet/
-test_range/
-train_movements/
+output/test_parquet/
+output/test_range/
+output/train_movements/
 datasets/DBahn-berlin/timetable_changes/
 datasets/DBahn-berlin/timetables/
 datasets/DBahn-berlin/readme.md
