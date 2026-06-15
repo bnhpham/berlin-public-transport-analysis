@@ -68,4 +68,5 @@ For `timetable_changes/`, folders are every 15 minutes (e.g., `2509021215/`, `25
 * PostgreSQL 18.3
 * Hadoop 3.3.5
 * Pyspark 3.5.1 (Python API for Apache Spark)
+* Networkx 3.4.2
 
