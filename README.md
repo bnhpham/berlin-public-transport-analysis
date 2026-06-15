@@ -5,9 +5,9 @@ This exercise implements ETL pipelines for data integration and analysis of real
 ## Data Source
 The dataset is not included in this repository as it was provided as part of the course. However, it can be accessed via the [Deutsche Bahn API Marketplace](https://developers.deutschebahn.com/db-api-marketplace/apis/).
 The data consists of three components:
-* **Stations**: Metadata for all 133 S-Bahn stations in Berlin (.json).
-* **Timetables**: Planned train movements collected hourly (.xml).
-* **Timetable Changes**: Disruptions (delays, cancellations) collected every 15 minutes (.xml).
+* **Stations**: Metadata for all 133 S-Bahn stations in Berlin (`.json`).
+* **Timetables**: Planned train movements collected hourly (`.xml`).
+* **Timetable Changes**: Disruptions (delays, cancellations) collected every 15 minutes (`.xml`).
 
 The collected data is contained into weekly `.tar.gz` archives representing hourly timetables and 15-minutes sampled timetable_changes:
 * `timetables/`: Hourly snapshots (`YYMMDDHHMM`, e.g. `2509021200`).
@@ -43,7 +43,7 @@ For `timetable_changes/`, folders are every 15 minutes (e.g., `2509021215/`, `25
 * A star schema designed to represent train movements:
     * Fact Table: `train_movements` (planned arrival and departure times, delays, cancellations, platforms)
     * 4 Dimension Tables: stations, trains, date, time
-* Ingestion pipeline that parses .json and .xml files and loads the data into the schema in PostgreSQL.
+* Ingestion pipeline that parses `.json` and `.xml` files and loads the data into the schema in PostgreSQL.
 * Four SQL queries were implemented on the ingested dataset:
     * 2.1 - Given a station name, return its coordinates and identifier.
     * 2.2 - Given latitude/longitude, return the name of the closest station.
@@ -51,7 +51,7 @@ For `timetable_changes/`, folders are every 15 minutes (e.g., `2509021215/`, `25
     * 2.4 - Given a station name, return the average train delay in that station.
 
 ## Task 3: Large-Scale ETL and Analysis in Spark
-* Implementation of an end-to-end Apache Spark ETL pipeline to process the raw .xml files, extract relevant fields and store the result as a Parquet dataset partitioned by time snapshots.
+* Implementation of an end-to-end Apache Spark ETL pipeline to process the raw `.xml` files, extract relevant fields and store the result as a Parquet dataset partitioned by time snapshots.
 * Two analytical queries were designed on the Parquet dataset:
     * 3.2 - Given a station name, return the average daily delay over the period that the data was collected.
     * 3.3 - Return the average number of train departures per station during peak hours (07:00 to 09:00 and 17:00 to 19:00).
